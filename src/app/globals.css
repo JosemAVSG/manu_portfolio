@@ -17,17 +17,45 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.stacked-text {
+  position: absolute;
+
+  width: 350px;
+  height: 302.42px;
+  top: 271px;
+  left: 20px;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Color blanco para el texto */
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+
+.stacked-text::before,
+.stacked-text::after {
+  content: 'manuel blanco';
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: white; /* Color inicial del texto apilado */
+  opacity: 0.2; /* Transparencia inicial */
+}
+
+.stacked-text::before {
+  top: -10px;
+  opacity: 0.8;
+}
+
+.stacked-text::after {
+  top: 10px;
+  opacity: 0.4;
 }
