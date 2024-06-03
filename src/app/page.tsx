@@ -15,10 +15,9 @@ export default function Home() {
   };
   return (
     <main onClick={changeBackground} className={`flex min-h-screen  flex-col items-center justify-between p-24 transition-colors duration-500 `}  style={{ backgroundColor: background }}>
-      <div className={`stacked-text ${background==='black'|| background==='gray' ? 'text-white' : 'text-black'}`}>
-        {/* { background === 'black' || background === 'gray' ? <Image src={name} alt="name" width={350} height={302} /> : <Image src={nameblack} alt="name" width={350} height={302} /> } */}
-        <h1 >manuel blanco </h1>
-    </div>
+      <div>
+        { background === 'black' || background === 'gray' ? <Image src={name} alt="name" width={350} height={302} /> : <Image src={nameblack} alt="name" width={350} height={302} /> } 
+      </div>
     </main>
   );
 }

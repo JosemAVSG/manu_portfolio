@@ -1,0 +1,40 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  padding: 1rem 2rem;  /* Add padding for spacing */
+  background: transparent;
+}
+
+.navbar a {
+  color: #ffffff;  /* Text color */
+  text-decoration: none;  /* Remove underline */
+  font-weight: bold;  /* Add emphasis */
+  margin-right: 1rem;  /* Add spacing between links */
+}
+
+.navbar a:hover {
+  color: #000;  /* Change color on hover */
+}
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Ajustar a disposición vertical */
+      align-items: flex-start; /* Alinear elementos a la izquierda */
+    }
+  }
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar .info,
+    .navbar .portfolio {
+      margin-bottom: 10px;
+    }
+    .navbar .portfolio{
+      position: absolute;
+      bottom: -800px;
+      right: -280px;
+    }
+  }
