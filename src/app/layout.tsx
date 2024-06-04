@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { inter } from "@/config/font";
 import Navbar from "@/components/Navbar";
-
+import  Providers from '@/redux/provider'
 export const metadata: Metadata = {
   title: "Manuel Blanco's Portfolio",
   description: "Personal Portfolio by Manuel Blanco",
@@ -18,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <Providers>
       <Navbar/>
         {children}
+        </Providers>
       </body>
     </html>
   );
