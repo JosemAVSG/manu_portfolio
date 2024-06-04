@@ -8,14 +8,12 @@
 }
 
 .navbar a {
-  color: #ffffff;  /* Text color */
-  text-decoration: none;  /* Remove underline */
-  font-weight: bold;  /* Add emphasis */
-  margin-right: 1rem;  /* Add spacing between links */
-}
+font-size: 32px;
+font-weight: 410;
+line-height: 37.76px;
+letter-spacing: 0.05em;
+text-align: right;
 
-.navbar a:hover {
-  color: #000;  /* Change color on hover */
 }
   @media (max-width: 768px) {
     .navbar {
@@ -28,13 +26,10 @@
       flex-direction: column;
       align-items: flex-start;
     }
-    .navbar .info,
-    .navbar .portfolio {
-      margin-bottom: 10px;
-    }
+   
     .navbar .portfolio{
       position: absolute;
-      bottom: -780px;
-      right: -280px;
+      bottom: -750px;
+      right: -230px;
     }
   }

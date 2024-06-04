@@ -13,15 +13,13 @@ export default function Home() {
   const dispatch = useAppDispatch();
   const changeBackground = () => {
       const nextIndex = (index + 1) % colors.length;
-      
-      // setBackground(colors[nextIndex]);
       setIndex(nextIndex);
       dispatch(setColor(colors[nextIndex]));
   };
   return (
-    <main onClick={changeBackground} className={`flex min-h-screen  flex-col items-center justify-between p-24 transition-colors duration-500 `}  style={{ backgroundColor: background }}>
-      <div>
-        { background === 'black' || background === 'gray' ? <Image src={name} alt="name" width={350} height={302} /> : <Image src={nameblack} alt="name" width={350} height={302} /> } 
+    <main onClick={changeBackground} className={`flex min-h-screen  flex-col items-center justify-between p-1  transition-colors duration-500 `}  style={{ backgroundColor: background }}>
+      <div className="m-auto " >
+        { background === 'black' || background === 'gray' ? <Image src={name} alt="name" width={350} height={302.42} /> : <Image src={nameblack} alt="name" width={350} height={302.42} /> } 
       </div>
     </main>
   );
