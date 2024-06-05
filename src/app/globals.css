@@ -25,40 +25,8 @@ body {
   background-color: #f5f5f5;
   color: #333;
   min-height: 100vh;
-  background: url("/src/assets/bg.png");
+  background: url("../assets/bg.png");
   background-size: cover;
 }
-
-.stacked-text {
-position: absolute;
-width: 350px;
-height: 302.42px;
-font-size: 50px;
- left: 20px;
- top: 271px;
-  font-family: Arial, sans-serif;
-  line-height: 1;
-  text-align: center;
-}
-
-.stacked-text::before,
-.stacked-text::after {
-  content: 'manuel blanco'; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  opacity: 0.2; /* Transparencia inicial */
-}
-
-.stacked-text::before {
-  top: -10px;
-  opacity: 0.8;
-}
-
-.stacked-text::after {
-  top: 10px;
-  opacity: 0.4;
-}
-
 
 

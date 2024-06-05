@@ -17,19 +17,19 @@ export default function Home() {
       setIndex(nextIndex);
       dispatch(setColor(colors[nextIndex]));
   };
-  const listItems = Array.from({ length: 3 }, (_, i) => (
-    <li key={i} className={`${background === 'black' || background === 'gray' ? 'text-white': 'text-black' } `}>manuel blanco</li>
+  const listItems = Array.from({ length: 5 }, (_, i) => (
+    <li key={i} className={` ${background === 'black' || background === 'gray' ? 'text-white': 'text-black' }  `}>manuel blanco</li>
   ));
   return (
-    <main onClick={changeBackground} className={`flex min-h-screen  flex-col items-center justify-between p-1  transition-colors duration-500 `}  style={{ backgroundColor: background }}>
-      <div className="m-auto " >
-        
+    <main onClick={changeBackground} className={`flex items-center min-h-screen   transition-colors duration-500 `}  style={{ backgroundColor: background }}>
+      <div className="m-auto">
+
         <ul className={`${style.rainbowlist}`}>
          {listItems}         
         </ul>
-        {/* <h1 className={`${style.rainbow} ${background === 'black' || background === 'gray' ? 'text-white': 'text-black' }  ` } >manuel blanco</h1> */}
+       </div>      
         {/* { background === 'black' || background === 'gray' ? <Image src={name} alt="name" width={350} height={302.42} /> : <Image src={nameblack} alt="name" width={350} height={302.42} /> }  */}
-      </div>
+      
     </main>
   );
 }
