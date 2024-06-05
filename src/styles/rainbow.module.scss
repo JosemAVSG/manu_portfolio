@@ -5,39 +5,33 @@
 
 .rainbowlist{
   counter-reset: rainbow;
-  position: relative;
+  height: 100vh;
+  position: absolute;
+  inset: 530px 20px auto auto;
   list-style: none;
   padding: 0;
   margin: 0 auto;  
 
-
- li {
+.list {
   counter-increment: rainbow;
   font-size: 3rem;
-  text-shadow:
-   -1px -1px 0 $--color-black,  
-    1px -1px 0 $--color-black,
-   -1px 1px 0 $--color-black,
-    1px 1px 0 $--color-black,
-   
-    4px 4px 0 rgba(0, 0, 0, .2);
-  
-  animation: rainbow 1.5s ease-in-out infinite;
   
   @for $i from 1 through 5 {
    &:nth-child(#{$i}) {
     animation-delay: calc( #{$i} / 10 * 1s);
-    z-index: -#{$i * 10};
+    z-index: #{$i * 10};
    }
-  }
-  
-  &:not(:first-child) {
+   &:not(:first-child){
     position: absolute;
     top: 0;
    }
+    
+  }
  }
 }
-
+.animated {
+  animation: rainbow 1.5s ease-in-out;
+}
 @keyframes rainbow {
  0% {
   transform: translateY(-200%);
@@ -50,71 +44,6 @@
  }
  100% {
   transform: translateY(0);
+  opacity: 0;
  }
 }
-
-// .rainbow {
-//     font-size: 3rem;  
-//     text-shadow:
-//       -1px -1px 0 var(--color-black),  
-//       1px -1px 0 var(--color-black),
-//       -1px 1px 0 var(--color-black),
-//       1px 1px 0 var(--color-black),
-//       4px 4px 0 rgba(0, 0, 0, .2);
-    
-//     animation: rainbow 1.5s ease-in-out infinite;
-//   }
-
-//   .rainbowlist {
-//     position: relative;
-//     padding: 0;
-//     margin: 0;
-//   }
-//   .rainbowlist li {
-//     font-size: 3rem;
-//     animation: rainbow 1.5s ease-in-out infinite;
-//   }
-//   @for $i from 1 through 3 {
-//     .rainbowlist li:nth-child(#{$i}) {
-//       animation-delay: calc(#{$i} / 10 * 1s);
-//       z-index: -#{$i * 10};
-//     }
-    
-//   }
-
-//   .rainbowlist li:first-child {
-//     animation: stop 1.5s ease-in-out infinite;
-//   }
-  
-//   .rainbowlist li:not(:first-child) {
-//     animation: rainbow 1.5s ease-in-out infinite;
-//   }
-//   @keyframes stop {
-//     0% {
-//       transform: translateY(-100%);
-//     }
-//     80% {
-//       transform: translateY(0);
-//     }
-//     90% {
-//       transform: translateY(-10%);
-//     }
-//     100% {
-//       transform: translateY(0);
-//     }
-//   }
-
-//   @keyframes rainbow {
-//     0% {
-//       transform: translateY(-100%);
-//     }
-//     80% {
-//       transform: translateY(0);
-//     }
-//     90% {
-//       transform: translateY(-10%);
-//     }
-//     100% {
-//       transform: translateY(0);
-//     }
-//   }

@@ -19,14 +19,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #f5f5f5;
-  color: #333;
-  min-height: 100vh;
+  font: inherit;
+  box-sizing: border-box;
   background: url("../assets/bg.png");
-  background-size: cover;
 }
 
 
