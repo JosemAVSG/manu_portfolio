@@ -17,10 +17,14 @@ export default function Home() {
   return (
     <main
       onClick={changeBackground}
-      className={`flex p-1 min-h-screen   transition-colors duration-500 `}
+      className={`sm:flex md:grid  p-1 min-h-screen overflow-y-hidden  transition-colors duration-500 `}
       style={{ backgroundColor: background }}
     >
+    <div className="grid grid-cols-3 grid-rows-2 ">
+
       <FallingTex></FallingTex>
+    </div>
+
     </main>
   );
 }

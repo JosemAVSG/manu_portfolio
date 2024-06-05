@@ -6,7 +6,7 @@
 
 .rainbowlist{
   counter-reset: rainbow;
-  height: 100vh;
+  height: 100px;
   position: absolute;
   inset: 480px 25px auto auto;
   list-style: none;
@@ -15,6 +15,7 @@
 
 .list {
   counter-increment: rainbow;
+  overflow-y: hidden;
   visibility: hidden;
   &:first-child {
     visibility: visible;
@@ -57,7 +58,25 @@
   opacity: 100;
  }
 }
-
 .rainbowlist .list:first-child.animated {
   visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+  .rainbowlist {
+    position: relative;
+    grid-row: span 2;
+    grid-column: span 2;
+    margin-left: 35px;
+    margin-top: 30px;
+    height: 100px;
+    width: 100%;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    
+  }
+  .rainbowlist .list {
+    font-size: 4rem;
+  }
 }

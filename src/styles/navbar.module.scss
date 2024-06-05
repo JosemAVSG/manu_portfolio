@@ -2,8 +2,11 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;  /* Add padding for spacing */
+  width: 100vw;
+  padding: 1rem;  /* Add padding for spacing */
   background: transparent;
 }
 
@@ -23,8 +26,10 @@ text-align: right;
   }
   @media (max-width: 768px) {
     .navbar {
+      width: 35%;
       flex-direction: column;
       align-items: flex-start;
+      
     }
    
     .navbar .portfolio{
