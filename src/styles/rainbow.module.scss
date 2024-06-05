@@ -3,6 +3,7 @@
  $--delay: 10;
  $--color-black: black;
 
+
 .rainbowlist{
   counter-reset: rainbow;
   height: 100vh;
@@ -11,9 +12,11 @@
   list-style: none;
   padding: 0;
   margin: 0 auto;  
+  font-family: 'Sequel Sans', sans-serif;
 
 .list {
   counter-increment: rainbow;
+  font-family: 'Sequel Sans', sans-serif;
   font-size: 3rem;
   @for $i from 1 through 10 {
    &:nth-child(#{$i}) {
