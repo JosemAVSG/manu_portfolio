@@ -8,8 +8,8 @@ const Navbar = () => {
     <>
     <header>
         <nav className={style.navbar}>
-            <Link className={`${style.info} ${background === 'black' || background === 'gray' ? "text-white" : "text-black"}  `} href="/info">INFO</Link>
-            <Link className={`${style.portfolio} ${background === 'black' || background === 'gray' ? "text-white" : "text-black"}  `} href="/portfolio">PORTFOLIO</Link>
+            <Link className={`font-sequel ${style.info} ${background === 'black' || background === 'gray' ? "text-white" : "text-black"}  `} href="/info">INFO</Link>
+            <Link className={`font-sequel ${style.portfolio} ${background === 'black' || background === 'gray' ? "text-white" : "text-black"}  `} href="/portfolio">PORTFOLIO</Link>
         </nav>
 
     </header>

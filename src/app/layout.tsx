@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Sequel_Sans } from "@/config/font";
+import { inter } from "@/config/font";
 import Navbar from "@/components/Navbar";
 import  Providers from '@/redux/provider'
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${Sequel_Sans.variable} font-sans`}>
+      <body className={inter.className}>
       <Providers>
       <Navbar/>
         {children}

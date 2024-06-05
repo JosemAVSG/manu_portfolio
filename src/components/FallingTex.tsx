@@ -19,10 +19,10 @@ const FallingTex = () => {
   
 
   const listItems = Array.from({ length: 10 }, (_, i) => (
-    <li key={i} className={`${style.list} ${background === 'black' || background === 'gray' ? 'text-white': 'text-black' } ${animated ? style.animated : ''}  `}>manuel blanco</li>
+    <li key={i} className={`font-medium ${style.list} ${background === 'black' || background === 'gray' ? 'text-white': 'text-black' } ${animated ? style.animated : ''}  `}>manuel blanco</li>
   ));
   return (
-    <ul className={`${style.rainbowlist}`}>
+    <ul className={` ${style.rainbowlist}`}>
     {listItems}         
    </ul>
    

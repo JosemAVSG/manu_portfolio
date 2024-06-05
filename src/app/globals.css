@@ -25,3 +25,20 @@ body {
 }
 
 
+@layer base {
+
+  @font-face {
+    font-family: 'Sequel Sans';
+    src: url('../../public/fonts/Sequel_Sans_Medium_Body.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Sequel Sans';
+    src: url('../../public/fonts/Sequel_Sans_Bold_Body.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+}

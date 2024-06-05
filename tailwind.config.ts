@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         sequel: ["Sequel Sans", "sans-serif"],
+        boldSequel: ["Sequel Sans", "bold"],
       },
     },
   },
