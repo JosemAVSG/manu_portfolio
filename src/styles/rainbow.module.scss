@@ -62,10 +62,18 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 390px) {
   .rainbowlist {
   position: absolute;
   inset: 480px 25px auto auto;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .rainbowlist {
+  position: absolute;
+  inset: 300px 80px auto auto;
   }
 
 }

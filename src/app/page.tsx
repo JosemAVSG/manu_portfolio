@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main
       onClick={changeBackground}
-      className={`sm:flex p-1 min-h-screen overflow-y-hidden transition-colors duration-500 `}
+      className={`sm:flex  p-1 min-h-screen overflow-y-hidden transition-colors duration-500 `}
       style={{ backgroundColor: background }}
     >
     <Hero></Hero>
