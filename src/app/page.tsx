@@ -1,9 +1,7 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHook";
 import { setColor } from "@/redux/slice/colorSlice";
-import style from "@/styles/rainbow.module.scss";
-import FallingTex from "@/components/FallingTex";
 import Hero from "@/components/Hero";
 export default function Home() {
   const background = useAppSelector((state) => state.color.background);
