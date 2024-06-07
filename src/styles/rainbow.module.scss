@@ -6,17 +6,16 @@
 
 .rainbowlist{
   counter-reset: rainbow;
-  height: 100px;
-  position: absolute;
-  inset: 480px 25px auto auto;
+  height: 100px; 
   list-style: none;
   padding: 0;
-  margin: 0 auto;  
-
+  margin: 0 auto;
+  
 .list {
   counter-increment: rainbow;
   overflow-y: hidden;
   visibility: hidden;
+  
   &:first-child {
     visibility: visible;
   }
@@ -61,6 +60,16 @@
 .rainbowlist .list:first-child.animated {
   visibility: visible;
 }
+
+
+@media screen and (max-width: 768px) {
+  .rainbowlist {
+  position: absolute;
+  inset: 480px 25px auto auto;
+  }
+
+}
+
 
 @media screen and (min-width: 768px) {
   .rainbowlist {

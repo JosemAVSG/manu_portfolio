@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from "@/hooks/reduxHook";
 import { setColor } from "@/redux/slice/colorSlice";
 import style from "@/styles/rainbow.module.scss";
 import FallingTex from "@/components/FallingTex";
+import Hero from "@/components/Hero";
 export default function Home() {
   const background = useAppSelector((state) => state.color.background);
   const colors = ["black", "yellow", "white", "gray"];
@@ -17,13 +18,10 @@ export default function Home() {
   return (
     <main
       onClick={changeBackground}
-      className={`sm:flex md:grid  p-1 min-h-screen overflow-y-hidden  transition-colors duration-500 `}
+      className={`sm:flex p-1 min-h-screen overflow-y-hidden transition-colors duration-500 `}
       style={{ backgroundColor: background }}
     >
-    <div className="grid grid-cols-3 grid-rows-2 ">
-
-      <FallingTex></FallingTex>
-    </div>
+    <Hero></Hero>
 
     </main>
   );

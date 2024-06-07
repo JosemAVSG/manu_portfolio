@@ -6,8 +6,9 @@
   align-items: center;
   justify-content: space-between;
   width: 100vw;
-  padding: 1rem;  /* Add padding for spacing */
+  padding: 1rem;
   background: transparent;
+  
 }
 
 .navbar a {
@@ -16,6 +17,8 @@ font-weight: 410;
 line-height: 37.76px;
 letter-spacing: 0.05em;
 text-align: right;
+margin-left: 20px;
+margin-right:20px ;
 
 }
   @media (max-width: 768px) {
