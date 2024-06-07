@@ -1,6 +1,11 @@
 .infopage{
     display: grid;
-    grid-template-rows: 10% 45% 45% 20%;
+    grid-template-rows: 10% 90%;
     height: 100vh;
     background: white;
+}
+.infocomponent{
+    display: grid;
+    grid-template-rows: 40% 10% 50%;
+    
 }
