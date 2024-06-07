@@ -2,7 +2,7 @@
 
 const InfoComponent = () => {
   return (
-    <div>
+    <div className="row-span-3">
       <h1>Hola</h1>
     </div>
   )

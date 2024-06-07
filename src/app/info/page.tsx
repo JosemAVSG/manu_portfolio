@@ -1,9 +1,11 @@
-
+import InfoComponent from "@/components/InfoComponent";
+import styles from '@/styles/infopage.module.scss'
 
 const Info= () => {
   return (
-    <div className="grid place-items-center">
-      <h1>Info</h1>   
+    <div className={styles.infopage}>
+      <div className="row-span-1 "></div>
+        <InfoComponent  ></InfoComponent>
     </div>
   )
 }

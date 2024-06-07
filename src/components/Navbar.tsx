@@ -10,42 +10,44 @@ const Navbar = () => {
   return (
     <>
       <header>
-        <nav className={style.navbar}>
+        <nav className={`${style.navbar}`}>
           {path === "/info" ? (
-          <Link
-          className={`font-sequel ${style.home} ${
-            background === "black" || background === "gray"
-              ? "text-white"
-              : "text-black"
-          }  `}
-          href="/"
-        >
-          Close
-        </Link>
+            <>
+              <Link className={`font-sequel `} href="/">
+                Close
+              </Link>
+              <Link
+                className={`font-sequel ${style.portfolio} `}
+                href="/portfolio"
+              >
+                PORTFOLIO
+              </Link>
+            </>
           ) : (
-            <Link
-            className={`font-sequel ${style.info} ${
-              background === "black" || background === "gray"
-                ? "text-white"
-                : "text-black"
-            }  `}
-            href="/info"
-          >
-            INFO
-          </Link>
-            
-          )}
+            <>
+              <Link
+                className={`font-sequel ${style.info} ${
+                  background === "black" || background === "gray"
+                    ? "text-white"
+                    : "text-black"
+                }  `}
+                href="/info"
+              >
+                INFO
+              </Link>
 
-          <Link
-            className={`font-sequel ${style.portfolio} ${
-              background === "black" || background === "gray"
-                ? "text-white"
-                : "text-black"
-            }  `}
-            href="/portfolio"
-          >
-            PORTFOLIO
-          </Link>
+              <Link
+                className={`font-sequel ${style.portfolio} ${
+                  background === "black" || background === "gray"
+                    ? "text-white"
+                    : "text-black"
+                }  `}
+                href="/portfolio"
+              >
+                PORTFOLIO
+              </Link>
+            </>
+          )}
         </nav>
       </header>
     </>
