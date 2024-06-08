@@ -1,0 +1,17 @@
+.portfolio {
+  display: grid;
+  grid-template-rows: 8% 92%;
+  height: 100vh;
+  background: white;
+}
+.portfolioComponent {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+.tech {
+  display: grid;
+  grid-row: span 1;
+  grid-template-columns: 10% auto;
+  
+}

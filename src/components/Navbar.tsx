@@ -11,7 +11,7 @@ const Navbar = () => {
     <>
       <header>
         <nav className={`${style.navbar}`}>
-          {path === "/info" ? (
+          {path === "/info" || path === "/portfolio"  ? (
             <>
               <Link className={`font-sequel `} href="/">
                 Close
