@@ -12,20 +12,41 @@ const PortfolioComponent = ({proyecto, techs, imagen}: Props) => {
         Project {proyecto? proyecto : "cualquier proyecto"} </div>
       <div className={ `${styles.tech}` } >
         <div className='col-span-1 border-r-2 border-black'>
-          <p>Techs</p>
-        </div>
+          <div>
 
+          <p>Techs</p>  
+          </div>
+        </div>
         <div className='col-span-1 '>
         <p>Portfolio</p>
         </div>
       </div>
-      <div>
+      <div className={styles.description_img}>
+        <div className='col-span-1 '>
+
+          <p>Description</p>
+        </div>
+        <div className='col-span-1'>
           { imagen ? (
+            <div className='flex justify-center items-center rounded-lg'>
+
             <Image src={imagen} alt="image" width={300} height={300} />
+            </div>
           ):(
-            <div className='loader'></div>
+            <span className={`${styles.loader} flex justify-center items-center`}></span>
           )}
+        </div>
+
       </div>
+
+        <div className={styles.information}>
+
+        </div>
+
+        <div className={styles.informationimage}>
+
+        </div>
+
     </div>
   )
 }
