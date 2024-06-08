@@ -39,11 +39,11 @@ const PortfolioComponent = ({proyecto, techs, imagen}: Props) => {
 
       </div>
 
-        <div className={styles.information}>
-
+        <div className='row-span-1'>
+            
         </div>
 
-        <div className={styles.informationimage}>
+        <div className='row-span-1'>
 
         </div>
 
