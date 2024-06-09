@@ -52,7 +52,7 @@ const PortfolioComponent = ({ proyecto, techs, imagen }: Props) => {
       </div>
 
       <div className={`${styles.centerimg} `}>
-        <div className=" flex justify-center items-center">
+        <div className=" flex p-20 justify-center items-center">
         
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam impedit quaerat totam repellendus dolorem iure consequatur id odio vitae eligendi, esse sapiente dicta eos, aut sint. Molestias, nam? At, animi.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum, quos deleniti quae assumenda beatae cum et officia, illo delectus exercitationem voluptates, nesciunt ipsam excepturi aliquam expedita eos magnam fugiat?
@@ -66,9 +66,11 @@ const PortfolioComponent = ({ proyecto, techs, imagen }: Props) => {
         </div>
       </div>
 
-      <div className="row-span-1">
-      <div className=" flex justify-center items-center">
-      footer 
+      <div className={` ${styles.footer}`}>
+      <div className="flex  font-sequel mx-4 items-center justify-between">
+          <p>
+            Manuel Blanco © 2022
+          </p>
       </div>
       </div>
     </div>

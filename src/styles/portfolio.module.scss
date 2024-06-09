@@ -6,7 +6,7 @@
 }
 .portfolioComponent {
   display: grid;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
   background: white;
 }
 
@@ -29,8 +29,17 @@
 .centerimg{
   display: grid;
   grid-row: span 1;
+  height: auto;
   justify-content: center;
   align-items: center;
+  background: white;
+}
+
+.footer{
+  display: grid;
+  grid-row: span 1;
+  height: 5%;
+  background: white;
 }
 
 //Loader
