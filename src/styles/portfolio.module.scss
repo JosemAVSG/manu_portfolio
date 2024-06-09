@@ -1,8 +1,8 @@
 .portfolio {
   display: grid;
-  grid-template-rows: 8% 92%;
-  height: 100vh;
+  grid-template-rows: 8% auto;
   background: white;
+
 }
 .portfolioComponent {
   display: grid;
@@ -13,18 +13,25 @@
 .tech {
   display: grid;
   grid-row: span 1;
-  grid-template-columns: 10% auto;
+  grid-template-columns: minmax(10%, 20%) 1fr;
+  // grid-template-columns: 10% auto;
+ 
 }
 
 .description_img {
   display: grid;
   grid-row: span 1;
   border-top: #000000 2px solid;
-  background: blue;
-  grid-template-columns: 50% 50%;
+  border-bottom: #000000 2px solid;
+  grid-template-columns: repeat(2, 1fr);
  
 }
-
+.centerimg{
+  display: grid;
+  grid-row: span 1;
+  justify-content: center;
+  align-items: center;
+}
 
 //Loader
 .loader {
