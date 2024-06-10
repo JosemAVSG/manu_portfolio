@@ -15,10 +15,10 @@ const InfoComponent = () => {
      
       </div>
       <div className=" font-sequel border-t-2 border-black row-span-1 flex justify-start items-center ">
-        <h2 className="m-4">correo</h2>
+        <h2 className="m-4">manuelblanco@gmail.com</h2>
       </div>
       <div className=" font-sequel border-t-2  border-gray-500 row-span-1flex justify-start">
-        <h2 className="m-4">redes</h2>
+        <span className="m-4"></span>
       </div>
     </div>
   );

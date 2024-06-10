@@ -19,7 +19,7 @@ const PortfolioComponent = ({ proyecto, techs, imagen }: Props) => {
       </div>
 
       <div className={`${styles.tech}  `}>
-        <div className="col-span-1 border-r-2 p-4 border-black h-auto ">
+        <div className="col-span-1 xs:border-b-2 sm:border-b-2 md:border-r-2 xs:border-b-2 p-4 border-black h-auto ">
           <div className="flex gap-2 justify-start self-center flex-wrap h-full  ">
             {techs ? techs.map((tech, index) => <p key={index} className="flex font-sequel text-xs items-center rounded-2xl border border-gray-900 px-4 py-1" >{tech}</p>) : "No hay tecnologías"}
           </div>
@@ -35,7 +35,7 @@ const PortfolioComponent = ({ proyecto, techs, imagen }: Props) => {
       </div>
 
       <div className={` ${styles.description_img} `}>
-        <div className="col-span-1 flex py-40 px-20 justify-center items-center border-r-2 border-black ">
+        <div className="col-span-1 flex py-40 px-20 justify-center items-center  md:border-r-2 border-black ">
           <p>Designed and develop mobile oriented designs for a more concise and easy-to-use UI, allowing the user to have a better experience</p>
         </div>
         <div className="col-span-1 flex p-20 justify-center items-center ">
@@ -52,7 +52,7 @@ const PortfolioComponent = ({ proyecto, techs, imagen }: Props) => {
       </div>
 
       <div className={`${styles.centerimg} `}>
-        <div className=" flex p-20 justify-center items-center">
+        <div className=" flex p-20 justify-center items-center border-b-2 border-black">
         
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam impedit quaerat totam repellendus dolorem iure consequatur id odio vitae eligendi, esse sapiente dicta eos, aut sint. Molestias, nam? At, animi.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum, quos deleniti quae assumenda beatae cum et officia, illo delectus exercitationem voluptates, nesciunt ipsam excepturi aliquam expedita eos magnam fugiat?
@@ -67,7 +67,7 @@ const PortfolioComponent = ({ proyecto, techs, imagen }: Props) => {
       </div>
 
       <div className={` ${styles.footer}`}>
-      <div className="flex  font-sequel mx-4 items-center justify-between">
+      <div className="flex  font-sequel mx-4 items-center justify-between ">
           <p>
             Manuel Blanco © 2022
           </p>
