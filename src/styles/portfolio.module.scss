@@ -40,21 +40,6 @@
 }
 ///// Responsive //////
 
-/// Tablets
-
-// @media screen and (min-width: 768px) {
-//   .portfolio {
-//     display: grid;
-//     grid-template-rows: 10% auto;
-//     background: white;
-//   }
-//   .portfolioComponent {
-//     display: grid;
-//     grid-template-rows: auto auto auto auto auto auto;
-//     background: white;
-//   }
-// }
-
 //// Mobile ///
 
 @media screen and (max-width: 768px) {
@@ -69,7 +54,9 @@
     grid-template-columns: none;
     grid-template-rows: auto auto;
     border-right: none;
-    
+    div:first-child {
+      border-bottom: #000000 2px solid;
+    }
   }
   
   .description_img {
@@ -78,9 +65,15 @@
     grid-template-columns: none;
     grid-template-rows: auto auto;
     border-right: none;
-    &:first-child {
+    div:first-child {
       border-bottom: #000000 2px solid;
     }
+  }
+
+  .footer {
+    display: grid;
+    grid-row: span 1;
+    height: 3%;
   }
 }
 

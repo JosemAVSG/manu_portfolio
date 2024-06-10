@@ -19,10 +19,10 @@ const PortfolioComponent = ({ proyecto, techs, imagen }: Props) => {
       </div>
 
       <div className={`${styles.tech}  `}>
-        <div className="col-span-1 xs:border-b-2 sm:border-b-2 md:border-r-2 xs:border-b-2 p-4 border-black h-auto ">
-          <div className="flex gap-2 justify-start self-center flex-wrap h-full  ">
-            {techs ? techs.map((tech, index) => <p key={index} className="flex font-sequel text-xs items-center rounded-2xl border border-gray-900 px-4 py-1" >{tech}</p>) : "No hay tecnologías"}
-          </div>
+        <div className="col-span-1 md:border-r-2 xs:border-b-2 p-4 border-black h-auto ">
+          <ul className="flex gap-2 justify-start self-center flex-wrap h-full">
+            {techs ? techs.map((tech, index) => <li key={index} className="flex font-sequel text-xs items-center rounded-2xl border border-gray-900 px-4 py-1" >{tech}</li>) : "No hay tecnologías"}
+          </ul>
         </div>
         <div className="col-span-1 m-4">
           <p className=" flex h-full items-center text-xl font-sequel ">

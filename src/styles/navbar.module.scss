@@ -36,9 +36,9 @@ margin-right:20px ;
     }
    
     .navbar .portfolio{
-      position: absolute;
-      bottom: -550px;
-      right: -300px;
+      position: fixed; /* Cambiado a fixed para mantener siempre en la posición calculada del viewport */
+      top: calc(100vh - 50px); /* Ejemplo: 50px desde el fondo del viewport */
+      right: 0;
     }
   }
   @media (max-width: 480px) {
@@ -50,8 +50,10 @@ margin-right:20px ;
     }
    
     .navbar .portfolio{
-      position: absolute;
-      bottom: -750px;
-      right: -230px;
+
+      position: fixed; /* Cambiado a fixed para mantener siempre en la posición calculada del viewport */
+      top: calc(100vh - 50px); /* Ejemplo: 50px desde el fondo del viewport */
+      right: 0;
+   
     }
   }
