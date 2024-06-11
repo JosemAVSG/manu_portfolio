@@ -60,6 +60,7 @@
   overflow: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 @media (max-width: 480px) {
   .navbar {
