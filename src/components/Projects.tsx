@@ -1,14 +1,16 @@
 import styles from "@/styles/projects.module.scss";
+import { faTags } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Projects = () => {
   return (
     <>
       <div className={styles.projects}>
-        <div>
-          <h3>Projects</h3>
-        </div>
         <ul className={styles.list}>
           <li>
-            Project 1 techs
+            <div className={styles.title}> 
+           <h2>Project</h2>  
+            <FontAwesomeIcon  icon={faTags} width={10} />
+            </div>
             <ul className={styles.techlist}>
               <li>html</li>
               <li>css</li>

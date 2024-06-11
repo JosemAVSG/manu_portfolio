@@ -11,9 +11,32 @@
     flex-wrap: wrap;
     gap: 1rem;
     margin: 0;
+    background: white;
+    .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        font-size: 1.5rem;
+    }
     li{
         font-size: 1.5rem; 
-        padding: 20px;
+        padding: 10px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
         
     }
+}
+.techlist{
+    display: flex;
+    gap: 2px;
+    li{
+        padding: 2px 5px;
+        font-size: x-small;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 15px;
+        
+    }
+
 }
