@@ -3,15 +3,19 @@ import Link from "next/link";
 import style from "@/styles/navbar.module.scss";
 import { useAppSelector } from "@/hooks/reduxHook";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   const background = useAppSelector((state) => state.color.background);
+  const [openDropdown, setOpenDropdown] = useState(false);
   const path = usePathname();
 
   return (
     <>
       <header>
         <nav className={`${style.navbar}`}>
-          {path === "/info" || path === "/portfolio"  ? (
+          {path === "/info" || path === "/portfolio" ? (
             <>
               <Link className={`font-sequel `} href="/">
                 Close
@@ -36,19 +40,23 @@ const Navbar = () => {
                 INFO
               </Link>
 
-              <Link
-                className={`font-sequel ${style.portfolio} ${
+                <button
+                className={`font-sequel text-2xl ${style.portfolio} ${
                   background === "black" || background === "gray"
                     ? "text-white"
                     : "text-black"
                 }  `}
-                href="/portfolio"
+                onClick={() => setOpenDropdown(!openDropdown)}
               >
                 PORTFOLIO
-              </Link>
+              </button>
             </>
           )}
         </nav>
+          <div className={`${style.dropdown} ${openDropdown ? style.open : "hidden"}`}>
+            <h2>Project</h2>
+          </div>
+
       </header>
     </>
   );

@@ -1,0 +1,19 @@
+.projects{
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+.list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    li{
+        font-size: 1.5rem; 
+        padding: 20px;
+        
+    }
+}
