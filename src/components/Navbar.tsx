@@ -40,7 +40,7 @@ const Navbar = () => {
               >
                 INFO
               </Link>
-
+                {/* <ButtonPortfolio></ButtonPortfolio> */}
                 <button
                 className={`font-sequel ${style.portfolio} ${
                   background === "black" || background === "gray"
