@@ -4,8 +4,6 @@ import style from "@/styles/navbar.module.scss";
 import { useAppSelector } from "@/hooks/reduxHook";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import Projects from "./Projects";
 const Navbar = () => {
   const background = useAppSelector((state) => state.color.background);
@@ -14,19 +12,21 @@ const Navbar = () => {
 
   return (
     <>
-      <header>
-        <nav className={`${style.navbar}`}>
+      <header className="sticky top-0 z-20">
+        
+        <nav className={`${style.navbar} ${path === "/info" || path === "/portfolio" ? "bg-white" : "bg-transparent"}`}>
           {path === "/info" || path === "/portfolio" ? (
             <>
               <Link className={`font-sequel `} href="/">
                 Close
               </Link>
-              <Link
+              <button
                 className={`font-sequel ${style.portfolio} `}
-                href="/portfolio"
+                onClick={() => setOpenDropdown(!openDropdown)}
               >
                 PORTFOLIO
-              </Link>
+              </button>
+
             </>
           ) : (
             <>
@@ -40,7 +40,6 @@ const Navbar = () => {
               >
                 INFO
               </Link>
-                {/* <ButtonPortfolio></ButtonPortfolio> */}
                 <button
                 className={`font-sequel ${style.portfolio} ${
                   background === "black" || background === "gray"
@@ -55,8 +54,8 @@ const Navbar = () => {
           )}
         </nav>
           <div className={`${style.menuinside}
-           ${openDropdown ? 'block' : 'hidden'} `}>
-            <div className="flex justify-start p-4  bg-white">
+           ${openDropdown ? 'block' : 'hidden'} z-20 `}>
+            <div className="flex justify-start p-4  bg-white sticky top-0">
               <button className="font-sequel text-2xl" onClick={() => setOpenDropdown(!openDropdown)}>
               Close
               </button>

@@ -38,9 +38,9 @@ export const getProjectsAction = (): AppThunk => {
 
             const data = await fetch('products.json');
             const projects = await data.json();
-            console.log(projects);
             
-            dispatch(setProjects(projects));
+            
+            dispatch(setProjects(projects.projects));
             dispatch(setLoading(false));
         }
         catch(error){

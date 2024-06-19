@@ -10,7 +10,7 @@ interface Props {
 const PortfolioComponent = ({ proyecto, techs, imagen }: Props) => {
   return (
     <div className={styles.portofolioComponent}>
-      <div className="row-span-1 border-t-2 border-b-2 border-black sticky top-0 bg-white  ">
+      <div className="row-span-1 border-t-2 border-b-2 border-black sticky top-18 bg-white z-10">
         <div className="flex items-center m-4 py-2 gap-2">
           <h2>Project</h2>
           <FontAwesomeIcon icon={faArrowRight} width={20} />{" "}

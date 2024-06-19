@@ -5,9 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   padding: 1rem;
-  background: transparent;
+  // background: transparent;
 }
 
 .navbar a {
@@ -55,8 +55,8 @@
   right: 0;
   background: url("../assets/bg.png");
   background-size: cover;
-  width: 35vw;
-  height: 70vh;
+  width: 40vw;
+  height: 80vh;
   overflow: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
