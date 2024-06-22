@@ -3,11 +3,12 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 interface Props {
-  proyecto: string;
-  techs: string[];
-  imagen: string;
+  proyecto: string | undefined;
+  techs: string[] | undefined;
+  imagen: string | undefined;
+  description: string | undefined;
 }
-const PortfolioComponent = ({ proyecto, techs, imagen }: Props) => {
+const PortfolioComponent = ({ proyecto, techs, imagen, description }: Props) => {
   return (
     <div className={styles.portofolioComponent}>
       <div className="row-span-1 border-t-2 border-b-2 border-black sticky top-18 bg-white z-10">
@@ -36,7 +37,7 @@ const PortfolioComponent = ({ proyecto, techs, imagen }: Props) => {
 
       <div className={` ${styles.description_img} `}>
         <div className="col-span-1 flex py-40 px-20 justify-center items-center  md:border-r-2 border-black ">
-          <p>Designed and develop mobile oriented designs for a more concise and easy-to-use UI, allowing the user to have a better experience</p>
+          <p>{description}</p>
         </div>
         <div className="col-span-1 flex p-20 justify-center items-center ">
           {imagen ? (

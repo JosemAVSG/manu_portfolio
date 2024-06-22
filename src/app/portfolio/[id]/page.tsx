@@ -15,20 +15,29 @@ interface Project {
 const Portfolio = () => {
   
   const getid = usePathname().split("/").pop();
-  const Proyecto: Project[] = useAppSelector(state => state.color.projects);
-  const [project , setProject] = useState({});
-  
-  // useEffect(() => {
-  //   if(!Proyecto) return;
-  //  setProject(Proyecto[Number(getid)]);
-  // }, [getid,Proyecto]);
-  
-  console.log(Proyecto);
+  const Proyecto: Project[] = useAppSelector((state) => state.color.projects);
+  const isloading = useAppSelector(state => state.color.loading);
+  const [project, setProject] = useState<Project | null>(null);
+
+  useEffect(() => {
+    if (!isloading) {
+      const project = Proyecto[Number(getid)];
+      if (project) {
+        setProject(project);
+      } else {
+        setProject(null);
+      }
+    }
+  },[Proyecto, getid, isloading]);
+  console.log(project);
   
   return (
     <div className={styles.portfolio}>
       <div className='row-span-1'></div>
-     <PortfolioComponent proyecto="proyecto" techs={['html', 'css','vue','svelte', 'vanilla javascript', 'react', 'nextjs']} imagen={''}></PortfolioComponent>
+      {isloading? <p>Cargando...</p> :
+     <PortfolioComponent proyecto={ project?.name} techs={project?.stack} imagen={ project?.images[0] } description={ project?.descriptions[0] }></PortfolioComponent>
+      
+      }
     </div>
   )
 }
