@@ -10,12 +10,14 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const path = usePathname();
 
+
+  const isPortfolioPage = path.startsWith("/portfolio");
   return (
     <>
       <header className="sticky top-0 z-20">
         
-        <nav className={`${style.navbar} ${path === "/info" || path === "/portfolio" ? "bg-white" : "bg-transparent"}`}>
-          {path === "/info" || path === "/portfolio" ? (
+        <nav className={`${style.navbar} ${isPortfolioPage ? "bg-white" : "bg-transparent"}`}>
+          {path === "/info" || isPortfolioPage ? (
             <>
               <Link className={`font-sequel `} href="/">
                 Close

@@ -28,7 +28,7 @@ const  Projects = () => {
       <div className={styles.projects}>
         <ul className={styles.list}>
           {!isloading &&  projects.length !==0 && projects.map((project, index) => (
-           <Link key={index} href={`/portfolio`}> <li key={index}>
+           <Link key={index} href={`/portfolio/${index}`} > <li key={index}>
               <div className={`font-sequel ${ styles.title}`}> 
            <h2>{project.name}</h2>  
             <FontAwesomeIcon  icon={faTags} width={10} />
