@@ -40,23 +40,29 @@
         border-radius: 15px;
         text-align: center;
         justify-content: center;
+        height: min-content;
     }
 
 }
 
 @media screen and (max-width: 480px) {
+  
     .list{
-        width: auto;
+        width: 90%;
+
         li{ 
             width: fit-content;
+            
         }
-        
+        .title{
+            width: fit-content;
+            margin-bottom: 5px;
+        }
        
     }
     .techlist{
-        
         li{
-            font-size: 16px;
+            font-size: 12px;
         }
     }
 }
