@@ -22,14 +22,11 @@ const Portfolio = () => {
   useEffect(() => {
     if (!isloading) {
       const project = Proyecto[Number(getid)];
-      if (project) {
-        setProject(project);
-      } else {
-        setProject(null);
-      }
+      if (!project) return;
+
+      setProject(project);
     }
   },[Proyecto, getid, isloading]);
-  console.log(project);
   
   return (
     <div className={styles.portfolio}>

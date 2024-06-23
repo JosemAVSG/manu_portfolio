@@ -4,8 +4,8 @@
         "name": "INFRAPEDIA",
         "stack": ["VUE", "SASS", "VUEX", "VANILLA JAVASCRIPT", "TAILWINDCSS"],
         "images": [
-          "https://source.unsplash.com/random/800x600?technology",
-          "https://source.unsplash.com/random/800x600?coding"
+          "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+          "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
         ],
         "descriptions": [
           "Designed and developed mobile oriented designs for a more concise and easy-to-use UI, allowing the user to have a better experience.",
@@ -16,8 +16,8 @@
         "name": "AGRIMANAGER",
         "stack": ["VUE", "NUXT", "REDUX", "SASS", "TYPESCRIPT", "REACT", "VANILLA JAVASCRIPT"],
         "images": [
-          "https://source.unsplash.com/random/800x600?agriculture",
-          "https://source.unsplash.com/random/800x600?farm"
+          "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+          "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
         ],
         "descriptions": [
           "Agrimanager project involving complex state management and seamless user experience.",
@@ -28,8 +28,8 @@
         "name": "KOMERCIA",
         "stack": ["VUE", "VANILLA JAVASCRIPT", "TAILWINDCSS"],
         "images": [
-          "https://source.unsplash.com/random/800x600?commerce",
-          "https://source.unsplash.com/random/800x600?shopping"
+          "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+          "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
         ],
         "descriptions": [
           "Freelance project aimed at developing a robust e-commerce platform.",
@@ -40,8 +40,8 @@
         "name": "SERACERA",
         "stack": ["WORDPRESS", "ECOMMERCE"],
         "images": [
-          "https://source.unsplash.com/random/800x600?wordpress",
-          "https://source.unsplash.com/random/800x600?ecommerce"
+          "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+          "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
         ],
         "descriptions": [
           "Developed a WordPress-based e-commerce site for Seracera.",
@@ -52,8 +52,8 @@
         "name": "AGRIMANAGER V2.0",
         "stack": ["REDUX", "REACT", "MICROFRONTENDS WITH WEBPACK", "VANILLA JAVASCRIPT", "TAILWINDCSS"],
         "images": [
-          "https://source.unsplash.com/random/800x600?technology",
-          "https://source.unsplash.com/random/800x600?microservices"
+          "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+          "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
         ],
         "descriptions": [
           "Second version of Agrimanager with advanced state management and microfrontend architecture.",

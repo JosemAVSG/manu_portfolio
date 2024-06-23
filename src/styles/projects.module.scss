@@ -43,3 +43,20 @@
     }
 
 }
+
+@media screen and (max-width: 480px) {
+    .list{
+        width: auto;
+        li{ 
+            width: fit-content;
+        }
+        
+       
+    }
+    .techlist{
+        
+        li{
+            font-size: 16px;
+        }
+    }
+}
