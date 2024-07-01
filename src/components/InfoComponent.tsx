@@ -18,7 +18,19 @@ const InfoComponent = () => {
         <h2 className="m-4">manuelblanco@gmail.com</h2>
       </div>
       <div className=" font-sequel border-t-2  border-gray-500 row-span-1flex justify-start">
-        <span className="m-4"></span>
+        <ul className="flex my-4">
+
+        <li>
+          <span className="m-4">Facebook</span>
+        </li>
+        <li>
+          <span className="m-4">Linkedin</span>
+        </li>
+        <li>
+          <span className="m-4">Github</span>
+        </li>
+
+        </ul>
       </div>
     </div>
   );
