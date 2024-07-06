@@ -1,10 +1,10 @@
 import { configureStore ,Action,ThunkAction } from "@reduxjs/toolkit";
-import colorSlice from "./slice/colorSlice"
+import globalSlice from "./slice/globalSlice"
 
 
 const store = configureStore({
     reducer: {
-        color: colorSlice
+        globalSlice: globalSlice
     },
 });
 

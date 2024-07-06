@@ -8,8 +8,8 @@ const initialState = {
     loading: false,
 };
 
-const colorSlice = createSlice({
-    name: "color",
+const globalSlice = createSlice({
+    name: "global",
     initialState,
     reducers: {
         setColor: (state, action) => {
@@ -53,5 +53,5 @@ export const getProjectsAction = (): AppThunk => {
 
 
 
-export const { setColor, setOpenDropdown, setProjects, setLoading } = colorSlice.actions;
-export default colorSlice.reducer;
+export const { setColor, setOpenDropdown, setProjects, setLoading } = globalSlice.actions;
+export default globalSlice.reducer;

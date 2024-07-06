@@ -1,9 +1,7 @@
-"use client"
+
 import PortfolioComponent from '@/components/PortfolioComponent';
 import styles from '@/styles/portfolio.module.scss';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { useAppSelector } from '@/hooks/reduxHook';
+
 
 interface Project {
   name: string;           // Asegúrate de que 'name' coincida con el nombre correcto en tu objeto de proyecto
@@ -12,29 +10,26 @@ interface Project {
   descriptions: string[];
 }
 
-const Portfolio = () => {
+const getProducts =  async (id: number ) => {
   
-  const getid = usePathname().split("/").pop();
-  const Proyecto: Project[] = useAppSelector((state) => state.color.projects);
-  const isloading = useAppSelector(state => state.color.loading);
-  const [project, setProject] = useState<Project | null>(null);
+  const response = await fetch('http://localhost:3000/products.json');
+  const data = await response.json();
+  console.log(data);
+  return data.projects[id];
 
-  useEffect(() => {
-    if (!isloading) {
-      const project = Proyecto[Number(getid)];
-      if (!project) return;
+}
 
-      setProject(project);
-    }
-  },[Proyecto, getid, isloading]);
+const Portfolio = async ({params}: any) => {
   
+
+  const getid = params.id;
+  const project: Project = await getProducts(getid);
   return (
     <div className={styles.portfolio}>
       <div className='row-span-1'></div>
-      {isloading? <p>Cargando...</p> :
+    
      <PortfolioComponent proyecto={ project?.name} techs={project?.stack} imagen={ project?.images[0] } description={ project?.descriptions[0] }></PortfolioComponent>
       
-      }
     </div>
   )
 }

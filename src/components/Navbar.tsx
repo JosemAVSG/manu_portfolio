@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Projects from "./Projects";
 const Navbar = () => {
-  const background = useAppSelector((state) => state.color.background);
+  const background = useAppSelector((state) => state.globalSlice.background);
   const [openDropdown, setOpenDropdown] = useState(false);
   const path = usePathname();
 

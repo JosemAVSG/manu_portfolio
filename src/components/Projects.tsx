@@ -4,7 +4,7 @@ import styles from "@/styles/projects.module.scss";
 import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect , useState} from "react";
-import { getProjectsAction } from "@/redux/slice/colorSlice";
+import { getProjectsAction } from "../redux/slice/globalSlice";
 import Link from "next/link";
 
 interface Project {
@@ -16,9 +16,9 @@ interface Project {
   
 const  Projects = () => {
   const dispatch = useAppDispatch();
- const projects: Project[]= useAppSelector(state => state.color.projects) ;
+ const projects: Project[]= useAppSelector(state => state.globalSlice.projects) ;
  
- const isloading = useAppSelector(state => state.color.loading);
+ const isloading = useAppSelector(state => state.globalSlice.loading);
  useEffect(() => {
    dispatch(getProjectsAction());
   },[dispatch])

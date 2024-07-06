@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useAppSelector } from '@/hooks/reduxHook'
 
 const FallingTex = () => {
-  const background = useAppSelector((state) => state.color.background);
+  const background = useAppSelector((state) => state.globalSlice.background);
   const [animated, setAnimated] = useState(false);
 
   useEffect(() => {

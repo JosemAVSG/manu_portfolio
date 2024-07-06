@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHook";
-import { setColor } from "@/redux/slice/colorSlice";
+import { setColor } from "@/redux/slice/globalSlice";
 import Hero from "@/components/Hero";
 export default function Home() {
 
-  const background = useAppSelector((state) => state.color.background);
+  const background = useAppSelector((state) => state.globalSlice.background);
   const colors = ["black", "yellow", "white", "gray"];
   const [index, setIndex] = useState(0);
 
