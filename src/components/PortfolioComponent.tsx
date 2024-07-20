@@ -5,7 +5,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 interface Props {
   proyecto: string | undefined;
   techs: string[] | undefined;
-  imagen: string | undefined;
+  imagen: string[] | undefined;
   description: string | undefined;
 }
 const PortfolioComponent = ({ proyecto, techs, imagen, description }: Props) => {
@@ -35,14 +35,14 @@ const PortfolioComponent = ({ proyecto, techs, imagen, description }: Props) => 
         </div>
       </div>
 
-      <div className={` ${styles.description_img} `}>
+      <div className={`${styles.description_img}`}>
         <div className="col-span-1 flex py-40 px-20 justify-center items-center  md:border-r-2 border-black ">
           <p>{description}</p>
         </div>
         <div className="col-span-1 flex p-20 justify-center items-center ">
           {imagen ? (
             <div className="flex justify-center items-center rounded-lg">
-              <Image src={imagen} alt="image" width={300} height={300} />
+              <Image src={imagen[0]} alt="image" width={300} height={300} />
             </div>
           ) : (
             <span
@@ -52,18 +52,17 @@ const PortfolioComponent = ({ proyecto, techs, imagen, description }: Props) => 
         </div>
       </div>
 
-      <div className={`${styles.centerimg} `}>
-        <div className=" flex p-20 justify-center items-center border-b-2 border-black">
-        
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam impedit quaerat totam repellendus dolorem iure consequatur id odio vitae eligendi, esse sapiente dicta eos, aut sint. Molestias, nam? At, animi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum, quos deleniti quae assumenda beatae cum et officia, illo delectus exercitationem voluptates, nesciunt ipsam excepturi aliquam expedita eos magnam fugiat?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut rem sunt voluptas, sapiente ad laboriosam dolores unde nemo magni? Ipsum molestiae ducimus aliquam voluptate reprehenderit dolore vel dolorum modi officiis.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo maxime explicabo quaerat vel accusamus quibusdam nobis voluptatum pariatur! Eligendi omnis eum incidunt sequi fuga similique, perspiciatis nihil veniam distinctio molestiae.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptas veniam incidunt dolorum dolore earum, possimus quos necessitatibus nostrum natus, suscipit eius molestiae nobis ea, eum maxime quasi asperiores vero.
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid corporis nihil ex et dolorem, laudantium harum sunt? Dolore molestiae voluptate voluptatum atque cum culpa necessitatibus est iste? Magnam, magni mollitia!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laboriosam, cum minus harum odit sequi laudantium reprehenderit repudiandae voluptates eveniet error reiciendis natus magnam consequatur nobis quaerat aperiam saepe! Quia.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores animi, nihil reprehenderit, dicta optio totam tempore nemo ut vitae dignissimos qui maxime reiciendis quas ratione molestiae quo. Nulla, eveniet excepturi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis esse fuga cupiditate veritatis et assumenda velit nesciunt, cumque, quam distinctio, neque magnam unde alias atque sunt minima soluta incidunt fugit!
-          </p>
+      <div className={`${styles.centerimg}`}>
+        <div className=" flex p-10 justify-center items-center  border-black">
+          {imagen ? (
+            <div className="w-full h-auto">
+              <Image src={imagen[1]} alt="image" width={600} height={600} />
+            </div>
+          ) : (
+            <span
+              
+            ></span>
+          )}
         </div>
       </div>
 

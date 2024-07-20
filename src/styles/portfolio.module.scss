@@ -14,7 +14,6 @@
   grid-template-columns: minmax(5%, 18%) 1fr;
   li{
     font-size: .7rem;
-    
     height: min-content;
   }
   // grid-template-columns: 10% auto;
@@ -34,6 +33,7 @@
   justify-content: center;
   align-items: center;
   background: white;
+  border-bottom: 2px solid #000000;
 }
 
 .footer {

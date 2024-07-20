@@ -33,7 +33,6 @@ const  Projects = () => {
            <h2>{project.name}</h2>  
             <FontAwesomeIcon  icon={faTags} width={10} />
                 </div>
-            
               <ul className={` font-sequel ${styles.techlist}`}>
                 {project.stack.map((tech, index) => (
                   <li key={index}>{tech}</li>

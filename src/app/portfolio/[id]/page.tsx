@@ -14,9 +14,7 @@ const getProducts =  async (id: number ) => {
   
   const response = await fetch('http://localhost:3000/products.json');
   const data = await response.json();
-  console.log(data);
   return data.projects[id];
-
 }
 
 const Portfolio = async ({params}: any) => {
@@ -28,7 +26,7 @@ const Portfolio = async ({params}: any) => {
     <div className={styles.portfolio}>
       <div className='row-span-1'></div>
     
-     <PortfolioComponent proyecto={ project?.name} techs={project?.stack} imagen={ project?.images[0] } description={ project?.descriptions[0] }></PortfolioComponent>
+     <PortfolioComponent proyecto={ project?.name} techs={project?.stack} imagen={ project?.images } description={ project?.descriptions[0] }></PortfolioComponent>
       
     </div>
   )

@@ -14,8 +14,7 @@ const Navbar = () => {
   const isPortfolioPage = path.startsWith("/portfolio");
   return (
     <>
-      <header className="sticky top-0 z-20">
-        
+      <header className="sticky top-0 z-20">    
         <nav className={`${style.navbar} ${isPortfolioPage ? "bg-white" : "bg-transparent"}`}>
           {path === "/info" || isPortfolioPage ? (
             <>
@@ -23,12 +22,11 @@ const Navbar = () => {
                 Close
               </Link>
               <button
-                className={`font-sequel ${style.portfolio} `}
+                className={`font-sequel ${style.portfolio}`}
                 onClick={() => setOpenDropdown(!openDropdown)}
               >
                 PORTFOLIO
               </button>
-
             </>
           ) : (
             <>
