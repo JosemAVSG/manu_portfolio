@@ -6,7 +6,7 @@ interface Props {
   proyecto: string | undefined;
   techs: string[] | undefined;
   imagen: string[] | undefined;
-  description: string | undefined;
+  description: string []| undefined;
 }
 const PortfolioComponent = ({ proyecto, techs, imagen, description }: Props) => {
   return (
@@ -51,7 +51,9 @@ const PortfolioComponent = ({ proyecto, techs, imagen, description }: Props) => 
           )}
         </div>
       </div>
-
+        <div className=" flex p-10 justify-center items-center border-b-2 border-black">
+          {description ? <p>{description[1]}</p> : "No hay descripción"}
+        </div>
       <div className={`${styles.centerimg}`}>
         <div className=" flex p-10 justify-center items-center  border-black">
           {imagen ? (
