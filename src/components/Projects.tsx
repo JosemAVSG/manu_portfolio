@@ -13,8 +13,11 @@ interface Project {
       images: string[];       // Asegúrate de que 'images' coincida con el nombre correcto en tu objeto de proyecto
       descriptions: string[];
     }
+interface Props {
+  openDropdown: () => void
+}
   
-const  Projects = () => {
+const  Projects: React.FC<Props> = ({openDropdown}: Props ) => {
   const dispatch = useAppDispatch();
  const projects: Project[]= useAppSelector(state => state.globalSlice.projects) ;
  
@@ -28,17 +31,20 @@ const  Projects = () => {
       <div className={styles.projects}>
         <ul className={styles.list}>
           {!isloading &&  projects.length !==0 && projects.map((project, index) => (
-           <Link key={index} href={`/portfolio/${index}`} > <li key={index}>
-              <div className={`font-sequel ${ styles.title}`}> 
+           <Link key={index} href={`/portfolio/${index}`} >
+            <button onClick={openDropdown}>
+             <li key={index}>
+              <div className={`font-sequel ${styles.title}`}> 
            <h2>{project.name}</h2>  
             <FontAwesomeIcon  icon={faTags} width={10} />
                 </div>
-              <ul className={` font-sequel ${styles.techlist}`}>
+              <ul className={`font-sequel ${styles.techlist}`}>
                 {project.stack.map((tech, index) => (
-                  <li key={index}>{tech}</li>
+                   <li key={index}>{tech}</li>
                 ))}
               </ul>
             </li>
+            </button>
             </Link>
           ))}
       

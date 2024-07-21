@@ -18,7 +18,7 @@ const Navbar = () => {
         <nav className={`${style.navbar} ${isPortfolioPage ? "bg-white" : "bg-transparent"}`}>
           {path === "/info" || isPortfolioPage ? (
             <>
-              <Link className={`font-sequel `} href="/">
+              <Link className={`font-sequel`} href="/">
                 Close
               </Link>
               <button
@@ -60,7 +60,7 @@ const Navbar = () => {
               Close
               </button>
             </div>
-            <Projects></Projects>
+            <Projects openDropdown={() => setOpenDropdown(!openDropdown)} ></Projects>
           </div>
 
       </header>

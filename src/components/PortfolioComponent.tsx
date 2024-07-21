@@ -14,8 +14,8 @@ const PortfolioComponent = ({ proyecto, techs, imagen, description }: Props) => 
       <div className="row-span-1 border-t-2 border-b-2 border-black sticky top-18 bg-white z-10">
         <div className="flex items-center m-4 py-2 gap-2">
           <h2>Project</h2>
-          <FontAwesomeIcon icon={faArrowRight} width={20} />{" "}
-          {proyecto ? proyecto : "cualquier proyecto"}{" "}
+          <FontAwesomeIcon icon={faArrowRight} width={20} />
+          {proyecto ? proyecto : "cualquier proyecto"}
         </div>
       </div>
 
@@ -51,9 +51,11 @@ const PortfolioComponent = ({ proyecto, techs, imagen, description }: Props) => 
           )}
         </div>
       </div>
-        <div className=" flex p-10 justify-center items-center border-b-2 border-black">
+
+      <div className=" flex p-10 justify-center items-center border-b-2 border-black">
           {description ? <p>{description[1]}</p> : "No hay descripción"}
-        </div>
+      </div>
+      
       <div className={`${styles.centerimg}`}>
         <div className=" flex p-10 justify-center items-center  border-black">
           {imagen ? (
