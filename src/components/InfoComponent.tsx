@@ -21,13 +21,13 @@ const InfoComponent = () => {
         <ul className="flex my-4">
 
         <li>
-          <span className="m-4">Facebook</span>
+          <a><span className="m-4">Facebook</span></a>
         </li>
         <li>
-          <span className="m-4">Linkedin</span>
+          <a href="https://www.linkedin.com/in/manabl/" target="_blank"><span className="m-4">Linkedin</span></a>
         </li>
         <li>
-          <span className="m-4">Github</span>
+          <a href="https://github.com/mblancodev" target="_blank"><span className="m-4">Github</span></a>
         </li>
 
         </ul>

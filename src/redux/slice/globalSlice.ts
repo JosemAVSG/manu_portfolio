@@ -52,6 +52,5 @@ export const getProjectsAction = (): AppThunk => {
 
 
 
-
 export const { setColor, setOpenDropdown, setProjects, setLoading } = globalSlice.actions;
 export default globalSlice.reducer;
