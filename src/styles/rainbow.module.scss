@@ -23,7 +23,6 @@
   @for $i from 1 through 10 {
    &:nth-child(#{$i}) {
     animation-delay: calc( #{$i} / 10 * 1s);
-    z-index: #{$i * 10};
    }
    &:not(:first-child){
     position: absolute;

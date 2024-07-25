@@ -70,8 +70,8 @@ const PortfolioComponent = ({ proyecto, techs, imagen, description }: Props) => 
         </div>
       </div>
 
-      <div className={` ${styles.footer}`}>
-      <div className="flex  font-sequel mx-4 items-center justify-between ">
+      <div className={`${styles.footer}`}>
+      <div className="flex font-sequel  mx-4 items-center justify-between ">
           <p>
             Manuel Blanco © 2022
           </p>

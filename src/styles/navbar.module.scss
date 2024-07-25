@@ -69,8 +69,8 @@
 
   .navbar .portfolio {
     position: fixed; /* Cambiado a fixed para mantener siempre en la posición calculada del viewport */
-    top: calc(100vh - 50px); /* Ejemplo: 50px desde el fondo del viewport */
-    right: 0;
+    top: calc(100vh - 45px); /* Ejemplo: 50px desde el fondo del viewport */
+    right: 0%;
   }
   .menuinside{
     width: 100%;

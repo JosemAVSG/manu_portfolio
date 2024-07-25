@@ -22,8 +22,8 @@ const FallingTex = () => {
     <li key={i} className={`font-medium ${style.list} ${background === 'black' || background === 'gray' ? 'text-white': 'text-black' } ${animated ? style.animated : ''}  `}>manuel blanco</li>
   ));
   return (
-    <ul className={` ${style.rainbowlist}`}>
-    {listItems}         
+    <ul className={`${style.rainbowlist}`}>
+    {listItems? listItems : null}         
    </ul>
    
   )

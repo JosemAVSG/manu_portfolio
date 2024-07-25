@@ -37,3 +37,4 @@ const InfoComponent = () => {
 };
 
 export default InfoComponent;
+
